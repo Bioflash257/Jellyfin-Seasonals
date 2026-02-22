@@ -9,6 +9,14 @@
     "imageUrl": "https://raw.githubusercontent.com/CodeDevMLH/Jellyfin-Seasonals/refs/heads/main/logo.png",
     "versions": [
       {
+        "version": "1.8.0.8",
+        "changelog": "Update SeasonalsPlugin.cs (1f8f2e0)",
+        "targetAbi": "10.11.0.0",
+        "sourceUrl": "https://github.com/Bioflash257/Jellyfin-Seasonals/releases/download/v1.8.0.8/Jellyfin.Plugin.Seasonals.zip",
+        "checksum": "d547c55fc911091f1f55d90313b4046b",
+        "timestamp": "2026-02-22T23:39:16Z"
+      },
+      {
         "version": "1.8.0.0",
         "changelog": "- feat: add summer, spring, carnival and cherry blossom themes\n- fix: some improvements and bug fixes",
         "targetAbi": "10.11.0.0",
