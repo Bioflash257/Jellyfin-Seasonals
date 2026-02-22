@@ -13,7 +13,9 @@
 .leaf {
   position: fixed;
   z-index: 15;
-  top: -10%;
+  top: 0;
+  will-change: transform;
+  transform: translate3d(var(--leaf-sway-x, 0), var(--leaf-fall-y, -10vh), 0) rotate(var(--leaf-rot, var(--rotate-start, -20deg)));
   font-size: 1em;
   color: #fff;
   font-family: Arial, sans-serif;
@@ -40,39 +42,43 @@
 
 @-webkit-keyframes leaf-fall {
   0% {
-    top: -10%;
+    --leaf-fall-y: -10vh;
   }
 
   100% {
-    top: 100%;
+    --leaf-fall-y: 100vh;
   }
 }
 
 @keyframes leaf-fall {
   0% {
-    top: -10%;
+    --leaf-fall-y: -10vh;
   }
 
   100% {
-    top: 100%;
+    --leaf-fall-y: 100vh;
   }
 }
 
 @-webkit-keyframes leaf-shake {
   0%, 100% {
-    -webkit-transform: translateX(0) rotate(var(--rotate-start, -20deg));
+    --leaf-sway-x: 0px;
+    --leaf-rot: var(--rotate-start, -20deg);
   }
   50% {
-    -webkit-transform: translateX(80px) rotate(var(--rotate-end, 20deg));
+    --leaf-sway-x: 80px;
+    --leaf-rot: var(--rotate-end, 20deg);
   }
 }
 
 @keyframes leaf-shake {
   0%, 100% {
-    transform: translateX(0) rotate(var(--rotate-start, -20deg));
+    --leaf-sway-x: 0px;
+    --leaf-rot: var(--rotate-start, -20deg);
   }
   50% {
-    transform: translateX(80px) rotate(var(--rotate-end, 20deg));
+    --leaf-sway-x: 80px;
+    --leaf-rot: var(--rotate-end, 20deg);
   }
 }
 

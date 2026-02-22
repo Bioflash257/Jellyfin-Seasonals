@@ -12,7 +12,9 @@
 
 .heart {
     position: fixed;
-    bottom: -10%;
+    top: 0;
+    will-change: transform;
+    transform: translate3d(var(--heart-sway-x, 0), var(--heart-fall-y, -10vh), 0);
     z-index: 15;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -32,11 +34,11 @@
 
 @-webkit-keyframes heart-fall {
     0% {
-        bottom: -10%
+        --heart-fall-y: -10vh;
     }
 
     100% {
-        bottom: 100%
+        --heart-fall-y: 100vh;
     }
 }
 
@@ -44,23 +46,21 @@
 
     0%,
     100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0)
+        --heart-sway-x: 0px;
     }
 
     50% {
-        -webkit-transform: translateX(80px);
-        transform: translateX(80px)
+        --heart-sway-x: 80px;
     }
 }
 
 @keyframes heart-fall {
     0% {
-        bottom: -10%
+        --heart-fall-y: -10vh;
     }
 
     100% {
-        bottom: 100%
+        --heart-fall-y: 100vh;
     }
 }
 
@@ -68,11 +68,11 @@
 
     0%,
     100% {
-        transform: translateX(0)
+        --heart-sway-x: 0px;
     }
 
     50% {
-        transform: translateX(80px)
+        --heart-sway-x: 80px;
     }
 }
 

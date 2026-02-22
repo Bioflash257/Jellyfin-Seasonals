@@ -13,14 +13,15 @@
 /* Petals */
 .cherryblossom-petal {
     position: fixed;
-    top: -20px;
+    top: 0;
     z-index: 1005;
     width: 15px;
     height: 10px;
     background-color: #ffc0cb; 
     border-radius: 15px 0px 15px 0px; 
     
-    will-change: transform, top;
+    will-change: transform;
+    transform: translate3d(var(--cherryblossom-sway-x, 0), var(--cherryblossom-fall-y, -10vh), 0) rotate(var(--cherryblossom-rot, 0deg));
     animation-name: cherryblossom-fall, cherryblossom-sway;
     animation-timing-function: linear, ease-in-out;
     animation-iteration-count: infinite, infinite;
@@ -44,15 +45,17 @@
 }
 
 @keyframes cherryblossom-fall {
-    0% { top: -10%; }
-    100% { top: 100%; }
+    0% { --cherryblossom-fall-y: -10vh; }
+    100% { --cherryblossom-fall-y: 100vh; }
 }
 
 @keyframes cherryblossom-sway {
     0%, 100% {
-        transform: translateX(0) rotate(0deg);
+        --cherryblossom-sway-x: 0px;
+        --cherryblossom-rot: 0deg;
     }
     50% {
-        transform: translateX(30px) rotate(45deg);
+        --cherryblossom-sway-x: 30px;
+        --cherryblossom-rot: 45deg;
     }
 }
