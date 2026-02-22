@@ -25,6 +25,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Sync workspace to origin/main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main --prune
+          git checkout main
+          git reset --hard origin/main
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
