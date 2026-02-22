@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 namespace Jellyfin.Plugin.Seasonals;
 
 /// <summary>
-/// The main plugin items. 
+/// The main plugin. 
 /// </summary>
 public class SeasonalsPlugin : BasePlugin<PluginConfiguration>, IHasWebPages
 {
