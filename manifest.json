@@ -9,6 +9,14 @@
     "imageUrl": "https://raw.githubusercontent.com/CodeDevMLH/Jellyfin-Seasonals/refs/heads/main/logo.png",
     "versions": [
       {
+        "version": "2.0.1.1",
+        "changelog": "Merge branch 'CodeDevMLH:main' into main (288e754)",
+        "targetAbi": "10.11.0.0",
+        "sourceUrl": "https://github.com/Bioflash257/Jellyfin-Seasonals/releases/download/v2.0.1.1/Jellyfin.Plugin.Seasonals.zip",
+        "checksum": "b53dcc3088e69e38988f44db93605223",
+        "timestamp": "2026-04-08T20:11:29Z"
+      },
+      {
         "version": "2.0.1.0",
         "changelog": "Improve config handling for season selection and seasonal rules parsing",
         "targetAbi": "10.11.0.0",
